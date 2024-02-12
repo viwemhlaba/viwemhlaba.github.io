@@ -339,6 +339,11 @@
   animation: bounce 0.5s infinite alternate; /* Add bounce animation */
 }
 
+.intro .notice {
+  color: #ffffff;
+  font-style: italic;
+}
+
 @keyframes bounce {
   to {
     transform: translateY(-10px); /* Adjust the maximum height of the bounce */

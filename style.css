@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.modal-content {
+  background-color: #323636 !important;
+  color: #fff;
+}
+
+.main-wrapper {
+  height: 100vh;
+  background-position: 50%;
+  background-size: cover;
+  width: 100vw;
+  background-image: url(pexels-paras-katwal-4218883.jpg);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(wpexels-paras-katwal-4218883.jpg);
+  background-size: cover;
+  filter: blur(4px);
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+/* Background overlay color */
+.main-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    51,
+    55,
+    55,
+    0.8
+  ); /* Adjust the color and opacity as needed */
+  filter: blur(4px);
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(
+    51,
+    55,
+    55,
+    0.8
+  ); /* Adjust the blur amount as needed */
+}
+
+.main-content {
+  text-align: center; /* Center the text within .main-content */
+  /* color: white; */ /* Set text color */
+}
+
+.intro {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.intro img {
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  margin-right: 10px; /* Adjust the margin between the image and text */
+}
+
+.intro h1 {
+  font-size: 2.75em;
+  line-height: 1;
+  font-weight: 300;
+  opacity: 1;
+  color: rgb(211 211 211/1); /* Adjust the font size as needed */
+}
+
+#name {
+  color: #fff;
+  font-weight: 800;
+  line-height: 1;
+  font-size: 4.5rem;
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
+#qualification {
+  color: rgb(211 211 211/1);
+  /* font-weight: 800; */
+  line-height: 1;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#work {
+  color: rgb(211 211 211/1);
+  /* font-weight: 800; */
+  line-height: 1;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.quali {
+  color: rgb(76 251 146/1);
+  font-style: italic;
+}
+
+.place {
+  font-weight: 600;
+}
+
+#work a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+/* Your existing CSS styles... */
+
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a1d1d;
+  padding: 20px;
+}
+
+.bottom-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  /* border-right: 1px solid #fff; */
+}
+
+.bottom-menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.bottom-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.about-intro {
+  font-weight: 600;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.modal-body .heading {
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+/* Add this CSS for the Portfolio Modal */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive grid columns */
+  gap: 20px; /* Adjust the gap between items */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.portfolio-item {
+  /* background-color: #ddd; */ /* Add background color or customize as needed */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: dashed 4px #666;
+  border-radius: 10px;
+  height: 100%; /* Ensure each item takes full height */
+}
+
+.portfolio-item:hover {
+  /* Add background color or customize as needed */
+  border: dashed 4px #2288e7;
+  border-radius: 10px;
+  transform: scale(1.1); /* Zoom in by 10% */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.item-title {
+  /* Add styles for the title */
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.item-title a {
+  text-decoration: none !important;
+  color: #fff;
+}
+
+.item-title a:hover {
+  text-decoration: none !important;
+  color: #2288e7;
+}
+
+.item-subtitle {
+  /* Add styles for the subtitle */
+  font-size: 1em;
+  color: #fff; /* Adjust color as needed */
+  margin-bottom: 20px;
+}
+
+.portfolio-item img {
+  /* Add styles for the image */
+  width: 100%; /* Make the image fill the container width */
+  max-height: 200px; /* Set a maximum height for the image */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+  border-radius: 8px; /* Optional: Add border-radius for a rounded look */
+}
+
+/* Additional Portfolio Links Styles */
+.additional-portfolio-links {
+  margin-top: 30px; /* Adjust the spacing from the portfolio items */
+  text-align: center;
+}
+
+.additional-portfolio-links h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fff; /* Adjust the color as needed */
+}
+
+.additional-portfolio-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.additional-portfolio-links li {
+  margin-bottom: 10px;
+}
+
+.additional-portfolio-links a {
+  text-decoration: none;
+  color: #2288e7; /* Adjust the color as needed */
+  font-weight: 500;
+  transition: color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.additional-portfolio-links a:hover {
+  color: #007bff; /* Adjust the color on hover as needed */
+}
+
+/* CSS for the Random Thoughts Modal */
+#randomThoughtsModal .modal-content {
+  background-color: #fff; /* Adjust background color as needed */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#randomThoughtsModal .modal-header,
+#randomThoughtsModal .modal-body {
+  border: none; /* Remove borders for a cleaner look */
+}
+
+#randomThoughtsModal .blog-title {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff; /* Adjust the color as needed */
+}
+
+#randomThoughtsModal .blog-description {
+  font-size: 1.2em;
+  color: #fff; /* Adjust the color as needed */
+  margin-bottom: 20px;
+}
+
+/* Optional: Add styling for additional content inside the blog modal */
+#randomThoughtsModal .blog-content p {
+  /* Additional styles for paragraphs */
+  line-height: 1.5;
+  /* Add more styles as needed */
+}
+
+.form-contact {
+  margin-bottom: 5px;
+}
+
+.err-message {
+  display: none;
+  color: #ff3b3f;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.main-icon-wrapepr {
+  background-color: #1a1d1d;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 39%;
+  border-radius: 20px;
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer; /* Add a smooth transition effect */
+}
+
+.icon:hover {
+  transform: translateY(-5px); /* Adjust the distance the icon bounces */
+  animation: bounce 0.5s infinite alternate; /* Add bounce animation */
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-10px); /* Adjust the maximum height of the bounce */
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1 column for smaller screens */
+    grid-template-rows: repeat(4, 1fr); /* 4 rows for smaller screens */
+  }
+}
+
+/* Your existing CSS styles... */
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+  }
+
+  .intro img {
+    width: 30px; /* Adjust the width as needed for smaller screens */
+    height: 30px; /* Adjust the height as needed for smaller screens */
+    margin-right: 5px; /* Adjust the margin for smaller screens */
+  }
+
+  .intro h1 {
+    font-size: 2em; /* Adjust the font size for smaller screens */
+  }
+
+  #name {
+    font-size: 2.5rem; /* Adjust the font size for smaller screens */
+    margin-top: 1.25rem; /* Adjust the margin-top for smaller screens */
+  }
+
+  #qualification,
+  #work {
+    font-size: 1.5rem; /* Adjust the font size for smaller screens */
+    margin-top: 1.5rem; /* Adjust the margin-top for smaller screens */
+  }
+
+  .bottom-menu {
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  .modal-content {
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1 column for smaller screens */
+    grid-template-rows: repeat(4, 1fr); /* 4 rows for smaller screens */
+  }
+
+  .portfolio-item {
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  .additional-portfolio-links h3 {
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+  }
+
+  .random-thoughts-modal .modal-content {
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  .main-icon-wrapepr {
+    width: 70%; /* Adjust the width for smaller screens */
+  }
+
+  .icon {
+    width: 30px; /* Adjust the width for smaller screens */
+    height: 30px; /* Adjust the height for smaller screens */
+  }
+}
